@@ -84,7 +84,7 @@ define runit::service (
 
   # eventually enabling/disabling the service
   if $enable == true {
-    debug( "Service ${name}: ${_ensure_enabled}" )
+    debug( "Service ${name}: ${ensure} enabled" )
     runit::service::enabled { $name: ensure => $ensure, timeout => $timeout }
   }
 
